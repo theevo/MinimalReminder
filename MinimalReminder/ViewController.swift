@@ -5,6 +5,7 @@
 //  Created by Theo Vora on 6/28/21.
 //
 
+import UserNotifications
 import UIKit
 
 class ViewController: UIViewController {
@@ -30,7 +31,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func setReminderButtonTapped(_ sender: Any) {
-        currentReminderLabel.text = "You tapped?"
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            
+            // Enable or disable features based on the authorization.
+            
+            if granted {
+                print("yay")
+            } else {
+                print("nay")
+            }
+        }
+        
+        let selectedTimeIndex = TimesSegmentedControl.selectedSegmentIndex
+        let selectedTime = availableTimes[selectedTimeIndex]
+        
+        print("Set a notification for \(selectedTime) from now")
     }
 }
 
