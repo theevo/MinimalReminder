@@ -11,11 +11,12 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    let availableTimes: [MRTimes] = [.sec30, .min1, .min2]
+    let availableTimes: [MRTimes] = [.sec15, .sec30, .min1]
     
     // MARK: - Outlets
 
     @IBOutlet weak var TimesSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var currentReminderLabel: UILabel!
     
     
     // MARK: - Lifecycle
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
         for i in 0..<availableTimes.count {
             TimesSegmentedControl.setTitle(("\(availableTimes[i])"), forSegmentAt: i)
         }
+    }
+    
+    @IBAction func setReminderButtonTapped(_ sender: Any) {
+        currentReminderLabel.text = "You tapped?"
     }
 }
 

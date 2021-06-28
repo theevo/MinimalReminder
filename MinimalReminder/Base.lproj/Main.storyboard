@@ -16,29 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i7H-wR-i5n">
-                                <rect key="frame" x="108.5" y="437.5" width="197" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                </segments>
-                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No reminders. Set one below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXa-Qt-Rwa">
+                                <rect key="frame" x="96" y="216.5" width="222.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VeM-bg-mrt">
+                                <rect key="frame" x="108.5" y="643" width="197" height="73"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i7H-wR-i5n">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title=""/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxj-51-947">
+                                        <rect key="frame" x="83.5" y="43" width="30" height="30"/>
+                                        <state key="normal" title="Set"/>
+                                        <connections>
+                                            <action selector="setReminderButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBh-SC-bGK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="i7H-wR-i5n" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CpP-jg-OqP"/>
-                            <constraint firstItem="i7H-wR-i5n" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hL4-F4-jCd"/>
+                            <constraint firstItem="VeM-bg-mrt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2iQ-1f-ael"/>
+                            <constraint firstItem="cXa-Qt-Rwa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GBY-IV-OjF"/>
+                            <constraint firstItem="VeM-bg-mrt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="La4-la-PGE"/>
+                            <constraint firstItem="cXa-Qt-Rwa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="oHQ-09-Zx6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="TimesSegmentedControl" destination="i7H-wR-i5n" id="ozT-BI-sbO"/>
+                        <outlet property="currentReminderLabel" destination="cXa-Qt-Rwa" id="bah-eh-AHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="94"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="93.75"/>
         </scene>
     </scenes>
     <resources>
