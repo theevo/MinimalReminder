@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    let availableTimes: [MRTimes] = [.sec30, .min1, .min2]
+    
+    // MARK: - Outlets
 
+    @IBOutlet weak var TimesSegmentedControl: UISegmentedControl!
+    
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        for i in 0..<availableTimes.count {
+            TimesSegmentedControl.setTitle(("\(availableTimes[i])"), forSegmentAt: i)
+        }
     }
-
-
 }
 
