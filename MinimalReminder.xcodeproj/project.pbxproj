@@ -14,6 +14,7 @@
 		AC309C36268A364400E7A0F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC309C35268A364400E7A0F1 /* Assets.xcassets */; };
 		AC309C39268A364400E7A0F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC309C37268A364400E7A0F1 /* LaunchScreen.storyboard */; };
 		AC309C42268A381600E7A0F1 /* MRTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC309C41268A381600E7A0F1 /* MRTimes.swift */; };
+		AC309C48268A717000E7A0F1 /* MRUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC309C47268A717000E7A0F1 /* MRUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AC309C3A268A364400E7A0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC309C41268A381600E7A0F1 /* MRTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTimes.swift; sourceTree = "<group>"; };
 		AC309C46268A6D4600E7A0F1 /* MinimalReminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinimalReminder.entitlements; sourceTree = "<group>"; };
+		AC309C47268A717000E7A0F1 /* MRUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AC309C46268A6D4600E7A0F1 /* MinimalReminder.entitlements */,
 				AC309C40268A380E00E7A0F1 /* Models */,
 				AC309C2C268A364200E7A0F1 /* AppDelegate.swift */,
+				AC309C47268A717000E7A0F1 /* MRUserDefaults.swift */,
 				AC309C2E268A364200E7A0F1 /* SceneDelegate.swift */,
 				AC309C30268A364200E7A0F1 /* ViewController.swift */,
 				AC309C32268A364200E7A0F1 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC309C31268A364200E7A0F1 /* ViewController.swift in Sources */,
+				AC309C48268A717000E7A0F1 /* MRUserDefaults.swift in Sources */,
 				AC309C42268A381600E7A0F1 /* MRTimes.swift in Sources */,
 				AC309C2D268A364200E7A0F1 /* AppDelegate.swift in Sources */,
 				AC309C2F268A364200E7A0F1 /* SceneDelegate.swift in Sources */,
