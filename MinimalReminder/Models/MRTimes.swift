@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MRTimes: Int {
+enum MRTimes: Double {
     case sec15 = 15
     case sec30 = 30
     case min1 = 60

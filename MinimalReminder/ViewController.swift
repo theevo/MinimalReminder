@@ -50,7 +50,26 @@ class ViewController: UIViewController {
         let selectedTimeIndex = TimesSegmentedControl.selectedSegmentIndex
         let selectedTime = availableTimes[selectedTimeIndex]
         
-        print("Set a notification for \(selectedTime) from now")
+        let content = UNMutableNotificationContent()
+        content.title = "Time's up"
+        content.body = "It's been \(selectedTime)"
+        content.categoryIdentifier = "alarm"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(
+            timeInterval: selectedTime.rawValue,
+            repeats: false)
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger)
+        
+        center.add(request) { error in
+            if let error = error {
+                print("Error creating request. Details: \(error)")
+            }
+        }
     }
 }
 
